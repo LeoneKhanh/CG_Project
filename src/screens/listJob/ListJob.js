@@ -8,10 +8,10 @@ export default class ListJob extends Component {
   render() {
     return (
       <View>
-        <TouchableOpacity
+        {/* <TouchableOpacity
           onPress={()=>{this.props.navigation.navigate('DrawerOpen');}}
         ><Text>Open Draw</Text></TouchableOpacity>
-          <Text>ListJob </Text>
+          <Text>ListJob </Text> */}
       </View>
     );
   }

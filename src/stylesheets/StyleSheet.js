@@ -23,7 +23,7 @@ export default StyleSheet.create({
         alignItems:'center', flexGrow:2, justifyContent: 'center'
     },
     Logo: {
-        width:100 , height:100
+        width:200 , height:100
     },
     LoginForm:
     {
@@ -49,6 +49,16 @@ export default StyleSheet.create({
     {
         color:'rgba(255,255,255,0.7)',
         fontSize:15
+    },
+    MenuIcon:
+    {
+        flex:1, width:60, height:10,
+    },
+    DrawerImage:
+    {
+        height:150,
+        width:150,
+        borderRadius:75
     }
 
 });

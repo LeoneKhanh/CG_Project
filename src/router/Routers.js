@@ -2,6 +2,7 @@ import React from 'react';
 //import React, { Component } from 'react';
 import {View, TouchableOpacity, Text,Image} from 'react-native';
 import { StackNavigator, DrawerNavigator } from 'react-navigation';
+import Styles from '../stylesheets/StyleSheet';
 
 import LogIn from '../screens/accounts/LogIn';
 import Register from '../screens/accounts/Register';
@@ -11,7 +12,7 @@ import ListJob from '../screens/listJob/ListJob';
 import Notifications from '../screens/notifications/Notifications';
 import SendJob from '../screens/sendJob/SendJob';
 import ProfileUser from '../screens/supportUser/ProfileUser';
-import CustomesDrawMenu from '../components/CustomesDrawMenu'
+import CustomesDrawMenu from '../components/CustomesDrawMenu';
 
 
 
@@ -57,7 +58,7 @@ export const ListJobStack = StackNavigator({
             title: 'List Job',
             headerLeft:(<TouchableOpacity
                 onPress={()=>{navigation.navigate('DrawerOpen');}}
-              ><Image source={require('../images/menuicon.png')}></Image></TouchableOpacity>)
+              ><Image style={Styles.MenuIcon} source={require('../images/menuicon.png')}></Image></TouchableOpacity>)
         }),
     }
 });
@@ -84,7 +85,7 @@ export const supportUserStack = StackNavigator({
     supportUser: {
         screen: ProfileUser,
         navigationOptions: {
-            title: 'support User',
+            header:null,
         },
     }
 });
@@ -103,7 +104,7 @@ export const MainScreenRouter = DrawerNavigator(
         contentComponent:  props => {
             return (
                <CustomesDrawMenu {...props}/>
-            );}
+            );},
     }
 );
 export const MainScreenRouters = StackNavigator({
@@ -119,5 +120,5 @@ export const MainScreenRouters = StackNavigator({
             header: null
         }
     }
-})
+});
 export default MainScreenRouters;
